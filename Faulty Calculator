@@ -1,0 +1,31 @@
+print("Available Operators=")
+print(" '+' for addition")
+print(" '-' for subtraction")
+print(" '*' for multiplication")
+print(" '/' for division")
+print(" '%' for modulo")
+a = int(input("First Number= "))
+c = input("Select Operator: ")
+b = int(input("Second Number= "))
+if c == "+":
+    if a + b == 8 + 9:
+        print('16')
+    else:
+        print(a + b)
+elif c == "-":
+        print(a - b)
+elif c == "*":
+    if a * b == 7 * 6:
+        print("40")
+    else:
+        print(a * b)
+elif c == "/":
+    if a / b == 6 / 3:
+        print("3")
+    else:
+         print(a / b)
+elif c == "%":
+    print(a % b)
+else:
+    print("Wrong Operator Selected")
+    

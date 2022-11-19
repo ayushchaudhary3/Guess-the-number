@@ -1,0 +1,20 @@
+m = 9
+k = 0
+while m:
+    n = 16
+    i = int(input("Guess Your Number: "))
+    m = m - 1
+    k = k + 1
+    if i == 16:
+        print("Congratulation, You Guessed Correctly in", k, "Attempts")
+        break
+    if i > 16 and m != 0:
+        print("You are getting High lil bro")
+    elif i < 16 and m != 0:
+        print("You are getting Low lil bro")
+    if m == 0:
+        print("Game Over")
+        break
+    else:
+        print(m, "Guesses Left")
+    continue

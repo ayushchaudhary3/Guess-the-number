@@ -1,6 +1,1 @@
-👋 Hi, I’m @ayushchaudhary3
-👀 I’m interested in coding and hacking
-🌱 I’m currently learning python3 and ethical hacking
-📫 How to reach me : 
-🫡Instagram- ayushchaudhary013 
-🫡Twitter- ayushchaudhary13
+Hello, I am @ayushchaudhary3 and I will be sharing my python codes here, hope you like it!🫡

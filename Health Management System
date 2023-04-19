@@ -1,0 +1,102 @@
+# Health Management System
+# coded in PyCharm
+
+def getdate():
+    import datetime
+    return datetime.datetime.now()
+
+
+a = int(input("1 for give, 2 for retrieve: "))
+
+if a == 1:
+    print("Write 1 for Rohan, 2 for Sohan, 3 for Mohan, 4 to retrieve")
+    a = int(input("Whose data you want to lock: "))
+
+    if a == 1:
+        print("You choose Rohan")
+        b = int(input("Choose 1 for diet and 2 for exercise: "))
+        if b == 1:
+            print("Write desired data: ")
+            with open("Rohan Diet.txt", "a") as f:
+                c = input()
+                f.write(str(getdate()) + ": " + c + "\n")
+                print("Done")
+        else:
+            print("Write desired data: ")
+            with open("Rohan Exercise.txt", "a") as f:
+                c = input()
+                f.write(str(getdate()) + ": " + c + "\n")
+                print("Done")
+                
+    elif a == 2:
+        print("You choose Sohan")
+        d = int(input("Choose 1 for diet and 2 for exercise: "))
+        if d == 1:
+            print("Write desired data: ")
+            with open("Sohan Diet.txt", "a") as f:
+                c = input()
+                f.write(str(getdate()) + ": " + c + "\n")
+                print("Done")
+        else:
+            print("Write desired data: ")
+            with open("Sohan Exercises.txt", "a") as f:
+                c = input()
+                f.write(str(getdate()) + ": " + c + "\n")
+                print("Done")
+                
+    elif a == 3:
+        print("You choose Mohan")
+        e = int(input("Choose 1 for diet and 2 for exercise: "))
+        if e == 1:
+            print("Write desired data: ")
+            with open("Mohan Diet.txt", "a") as f:
+                c = input()
+                f.write(str(getdate()) + ": " + c + "\n")
+                print("Done")
+        else:
+            print("Write desired data: ")
+            with open("Mohan Exercise.txt", "a") as f:
+                c = input()
+                f.write(str(getdate()) + ": " + c + "\n")
+                print("Done")
+                
+    else:
+        print("Wrong Input")
+
+
+elif a == 2:
+    g = int(input("Write 1 for Rohan, 2 for Sohan, 3 for Mohan: "))
+    if g == 1:
+        print("You Choose Rohan")
+        h = int(input("Choose 1 for diet and 2 for exercise: "))
+        if h == 1:
+            with open("Rohan Diet.txt") as f:
+                print(f.read())
+        else:
+            with open("Rohan Exercise.txt") as f:
+                print(f.readline())
+
+    elif g == 2:
+        print("You Choose Sohan")
+        h = int(input("Choose 1 for diet and 2 for exercise: "))
+        if h == 1:
+            with open("Sohan Diet.txt") as f:
+                print(f.readlines())
+        else:
+            with open("Sohan Exercises.txt") as f:
+                print(f.readlines())
+
+    elif g == 3:
+        print("You Choose Mohan")
+        h = int(input("Choose 1 for diet and 2 for exercise: "))
+        if h == 1:
+            with open("Mohan Diet.txt") as f:
+                print(f.readlines())
+        else:
+            with open("Mohan Exercise.txt") as f:
+                print(f.readlines())
+    else:
+        print("Wrong Input")
+
+else:
+    print("Wrong Input")

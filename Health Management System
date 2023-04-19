@@ -6,7 +6,7 @@ def getdate():
     return datetime.datetime.now()
 
 
-a = int(input("1 for give, 2 for retrieve: "))
+a = int(input("1 for log, 2 for retrieve: "))
 
 if a == 1:
     print("Write 1 for Rohan, 2 for Sohan, 3 for Mohan, 4 to retrieve")

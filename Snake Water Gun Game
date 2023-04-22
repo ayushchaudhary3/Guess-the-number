@@ -1,0 +1,66 @@
+import random
+
+m = 1
+n = 0
+a = 0
+b = 0
+c = 0
+d = 0
+while m :
+
+    n = n + 1
+    if n == 11:
+        break
+
+    print("Round", n)
+    SWG = ["Snake", "Water", "Gun"]
+    bot = random.choice(SWG)
+    user = input("1-Snake | 2-Water | 3-Gun\n: ")
+
+    if user == "1":
+        print("You Choose Snake")
+    elif user == "2":
+        print("You Choose Water")
+    elif user == "3":
+        print("You Choose Gun")
+    else:
+        d = d + 1
+        print("Wrong Input, Please Only Choose Between 1, 2 and 3")
+
+    if bot == "Snake" and user == "1":
+        c = c + 1
+        print("Draw\n")
+    elif bot == "Snake" and user == "2":
+        a = a + 1
+        print("Snake Wins\n")
+    elif bot == "Snake" and user == "3":
+        b = b + 1
+        print("Gun Wins\n")
+    elif bot == "Water" and user == "1":
+        b = b + 1
+        print("Snake Wins\n")
+    elif bot == "Water" and user == "2":
+        c = c + 1
+        print("Draw\n")
+    elif bot == "Water" and user == "3":
+        a = a + 1
+        print("Water Wins\n")
+    elif bot == "Gun" and user == "1":
+        a = a + 1
+        print("Gun Wins\n")
+    elif bot == "Gun" and user == "2":
+        b = b + 1
+        print("Water Wins\n")
+    elif bot == "Gun" and user == "3":
+        c = c + 1
+        print("Draw\n")
+    else:
+        print("Wrong Input\n")
+    continue
+print("Wins=" , b , "Loss=" , a , "Draw=" , c, "Error=",d)
+if a > b:
+    print("Sad:( You Lost")
+elif b > a:
+    print("Yay:) You Won")
+else:
+    print("Draw-_-")

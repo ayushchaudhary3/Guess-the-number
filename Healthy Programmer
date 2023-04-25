@@ -1,0 +1,58 @@
+# Healthy Programmer
+from time import time
+from pygame import mixer
+
+
+def getdate():
+    import datetime
+    return datetime.datetime.now()
+
+
+mixer.init()
+mixer.music.load("play.mp3")
+mixer.music.set_volume(0.7)
+
+if __name__ == "__main__":
+    init_water = time()
+    init_eyes = time()
+    init_exer = time()
+    water = 5
+    eyes = 10
+    exer = 20
+
+    while True:
+        if time() - init_water > water:
+            print("Drink Water")
+            mixer.music.play()
+            while True:
+                dk = input("Did you drink water?, Write Drank if you did: ")
+                if dk == "Drank":
+                    mixer.music.stop()
+                    break
+            init_water = time()
+            with open("water.txt", "a") as f:
+                f.write(str(getdate()) + ": " + "Water Drank" + "\n")
+
+        if time() - init_eyes > eyes:
+            print("Close Eyes")
+            mixer.music.play()
+            while True:
+                dk = input("Did you Give Rest to your Eyes?, Write EyDone if you did: ")
+                if dk == "EyDone":
+                    mixer.music.stop()
+                    break
+            init_eyes = time()
+            with open("eyes.txt", "a") as f:
+                f.write(str(getdate()) + ": " + "Eyes Closed" + "\n")
+
+        if time() - init_exer > exer:
+            print("Stretch your Body")
+            mixer.music.play()
+            while True:
+                dk = input("Did you Done lil Exercise?, Write ExDone if you did: ")
+                if dk == "ExDone":
+                    mixer.music.stop()
+                    break
+            init_exer = time()
+            with open("water.txt", "a") as f:
+                f.write(str(getdate()) + ": " + "Exercise Done" + "\n")
